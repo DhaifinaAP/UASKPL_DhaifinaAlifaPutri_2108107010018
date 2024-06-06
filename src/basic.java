@@ -13,6 +13,7 @@ public class basic extends base {
 		// TODO Auto-generated method stub
 		
 		AndroidDriver<AndroidElement> driver = capabilities();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		/* 
 		 * 1. About dan Profile
@@ -52,8 +53,6 @@ public class basic extends base {
 		driver.findElementByXPath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[3]").sendKeys("Computer Science Major");
 
 		driver.findElementByXPath("//android.widget.TextView[@text=\"Submit\"]").click();
-		
-		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]"))).click();
 		
